@@ -7,7 +7,7 @@ if($null -eq $AdminCreds) {
     $AdminCreds = Get-Credential
 }
 
-
+# TODO - Find source for this snippet.
 Try {
     (nltest /dsgetdc:[DOMAIN] /DS_6 /avoidself | findstr 'DC: ').split(" ") | %{
 
